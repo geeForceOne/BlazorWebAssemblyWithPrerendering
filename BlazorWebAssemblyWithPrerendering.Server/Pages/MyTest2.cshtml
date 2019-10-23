@@ -1,0 +1,35 @@
+﻿@page "/mytest2"
+@namespace BlazorWebAssemblyWithPrerendering.Pages
+@using BlazorWebAssemblyWithPrerendering.Client
+@using BlazorWebAssemblyWithPrerendering.Client.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlazorWebAssemblyWithPrerendering</title>
+    <base href="~/" />
+</head>
+<body>
+
+    @* To make this work, you need to 
+        call
+            app.AddComponent<Awesome>("awesome"); 
+        before 
+            app.AddComponent<Counter>("counter");
+        in
+            BlazorWebAssemblyWithPrerendering.Client.Startup
+{
+    *@
+
+
+    <awesome>
+        @(await Html.RenderComponentAsync<Awesome>(RenderMode.Static))
+    </awesome>
+
+
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+</html>

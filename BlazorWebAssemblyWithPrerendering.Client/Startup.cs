@@ -13,7 +13,12 @@ namespace BlazorWebAssemblyWithPrerendering.Client
 
         public void Configure(IComponentsApplicationBuilder app)
         {
-            app.AddComponent<App>("app");
+            //app.AddComponent<App>("app");
+
+            app.AddComponent<Counter>("counter");
+            app.AddComponent<Awesome>("awesome");
+
+
         }
     }
 }
